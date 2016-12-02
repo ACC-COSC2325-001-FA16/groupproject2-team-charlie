@@ -17,21 +17,9 @@ main:
         out         _SPL, r28
 
         ; initilaize the chip for blinking
-        call        init      
+        call        init
 
-        ; enter the blink loop
-1:      call        toggle      ; toggle LED to on
-        call        delay       ; turn on for 1/2 second
-        call        toggle      ; toggle LED to off
-        call        delay       ; turn off for 1 second
-        call        delay
-        call        toggle      ; toggle LED to on
-        call        delay       ; turn on for 1 second
-        call        delay
-        call        toggle      ; toggle LED to off
-        call        delay       ; turn off for 1/2 second
-        rjmp        1b
-
+        call        read_joystick
 
 
 init:   eor         r1, r1                  ; zero out the r1 register
@@ -43,7 +31,29 @@ init:   eor         r1, r1                  ; zero out the r1 register
         ; set up the LED port
         sbi         LED_DIR, LED_PIN        ; set LED pin to output
         cbi         LED_PORT, LED_PIN       ; start with the LED off
+
+        ; set up the JOYSTICK ports
+        sbi         0, X_PIN        ; set X pin to INPUT
+        ;cbi         1, X_PIN       ; start with the LED off
+        sbi         0, Y_PIN        ; set Y pin to INPUT
+        ;cbi         1, Y_PIN       ; start with the LED off
         ret
+
+read_joystick:
+        in          r24, X_PIN              ; read X pin on Joystick
+        cpi         r24, 4
+        brlt        light_led               ; branch if less than value
+        brge        read_joystick           ; branch if less than value
+        ;ret
+
+
+        ; enter the blink loop
+light_led:      call        toggle      ; toggle LED to on
+                call        delay       ; turn on for 1/2 second
+                call        toggle      ; toggle LED to off
+                call        delay       ; turn off for 1/2 second
+                jmp         light_led
+                ;rjmp        1b
 
 toggle:
         in          r24, LED_PORT           ; get current bits
