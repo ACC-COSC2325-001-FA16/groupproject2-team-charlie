@@ -18,46 +18,48 @@ main:
 
         ; initilaize the chip for blinking
         call        init
+        call        loop_joystick
 
-        call        read_joystick
 
-
-init:   eor         r1, r1                  ; zero out the r1 register
-        out         _SREG, r1               ; initialize the status reg
+init:   eor         r1, r1                   ; zero out the r1 register
+        eor         r26,r26
+        out         _SREG, r1                ; initialize the status reg
         ldi         r24, 0x80
-        sts         CLKPR, r24              ; allow access to clock setup
-        sts         CLKPR, r1               ; run at full speed
-        
+        sts         CLKPR, r24               ; allow access to clock setup
+        sts         CLKPR, r1                ; run at full speed       
+ 
         ; set up the LED port
-        sbi         LED_DIR, LED_PIN        ; set LED pin to output
-        cbi         LED_PORT, LED_PIN       ; start with the LED off
+        sbi         LED_DIR, LED_PIN         ; set LED pin to output
+        cbi         LED_PORT, LED_PIN        ; start with the LED off
 
         ; set up the JOYSTICK ports
-        sbi         0, X_PIN        ; set X pin to INPUT
-        ;cbi         1, X_PIN       ; start with the LED off
-        sbi         0, Y_PIN        ; set Y pin to INPUT
-        ;cbi         1, Y_PIN       ; start with the LED off
+        sbi         X_DIR, X_PIN             ; set X pin to INPUT
         ret
 
-read_joystick:
-        in          r24, X_PIN              ; read X pin on Joystick
-        cpi         r24, 4
-        brlt        light_led               ; branch if less than value
-        brge        read_joystick           ; branch if less than value
-        ;ret
+loop_joystick:                               ; start the loop
+        in          r25, X_PORT              ; read X pin on Joystick
+        cpi         r25, (1 << 5)            ; if input < test (5)
+        brlt        light_led                ; toggle led
+        jmp         read_joystick            ; else repeat look
 
-
-        ; enter the blink loop
-light_led:      call        toggle      ; toggle LED to on
-                call        delay       ; turn on for 1/2 second
-                call        toggle      ; toggle LED to off
-                call        delay       ; turn off for 1/2 second
-                jmp         light_led
-                ;rjmp        1b
+light_led:      
+        call        toggle                   ; toggle LED to on
+        call        delay                    ; for proper feedback
+        jmp         loop_joystick            ; end of loop ; repeat
 
 toggle:
-        in          r24, LED_PORT           ; get current bits
-        ldi         r25, (1 << LED_PIN)     ; LED is pin 5
-        eor         r24, r25                ; flip the bit
-        out         LED_PORT, r24           ; write the bits back
+        in          r24, LED_PORT            ; get current bits
+        ldi         r25, (1 << LED_PIN)      ; LED is pin 5
+        eor         r24, r25                 ; flip the bit
+        out         LED_PORT, r24            ; write the bits back
         ret
+
+
+
+
+
+
+
+
+
+
