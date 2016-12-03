@@ -33,14 +33,14 @@ init:   eor         r1, r1                   ; zero out the r1 register
         cbi         LED_PORT, LED_PIN        ; start with the LED off
 
         ; set up the JOYSTICK ports
-        sbi         X_DIR, X_PIN             ; set X pin to INPUT
+        sbi         X_DIR, X_PIN             ; set x_DIR to Output
         ret
 
 loop_joystick:                               ; start the loop
         in          r25, X_PORT              ; read X pin on Joystick
         cpi         r25, (1 << 5)            ; if input < test (5)
         brlt        light_led                ; toggle led
-        jmp         read_joystick            ; else repeat look
+        jmp         loop_joystick            ; else repeat look
 
 light_led:      
         call        toggle                   ; toggle LED to on
