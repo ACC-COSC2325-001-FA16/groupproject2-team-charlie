@@ -4,8 +4,8 @@
  - LED lights are on top, facing you.
  - Printed label [1088BS] is on right side of the matrix.
 
- * The #S (1-16) correspond to the
- * matrix pins show below and also Arduino pins.
+ * The #s (1-16) correspond to the
+ * matrix pins shown below and also Arduino pins.
  *
  * Make sure you hook up Arduino to the same #
  * pin as shown in the matrix diagram below.
@@ -71,16 +71,3 @@ void loop() {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
