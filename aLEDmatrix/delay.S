@@ -1,5 +1,5 @@
 ; delay.S
-;   nested loop delay (dumb!)
+;   nested loop delay
 #include <avr/io.h>
 
         .section        .text
