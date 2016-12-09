@@ -36,10 +36,20 @@
  *         ---------------------------
  */
 
+const int LEDmatrix[64][2] = {
+  {9, 16},{14, 16},{1, 16},{13, 16},{8, 16},{2, 16},{7, 16},{4, 16},
+  {9, 15},{14, 15},{1, 15},{13, 15},{8, 15},{2, 15},{7, 15},{4, 15},
+  {9, 11},{14, 11},{1, 11},{13, 11},{8, 11},{2, 11},{7, 11},{4, 11},
+  {9, 3}, {14, 3}, {1, 3}, {13, 3}, {8, 3}, {2, 3}, {7, 3}, {4, 3},
+  {9, 10},{14, 10},{1, 10},{13, 10},{8, 10},{2, 10},{7, 10},{4, 10},
+  {9, 5}, {14, 5}, {1, 5}, {13, 5}, {8, 5}, {2, 5}, {7, 5}, {4, 5},
+  {9, 6}, {14, 6}, {1, 6}, {13, 6}, {8, 6}, {2, 6}, {7, 6}, {4, 6},
+  {9, 12},{14, 12},{1, 12},{13, 12},{8, 12},{2, 12},{7, 12},{4, 12}
+};
 
 void setup() {
-  /* Note: Don't use Pins 0 & 1 simultaneously. They are they RX & TX lines.
-   * Will cause errors uploading the sketch if 0 & 1 are plugged in simultaneously. */
+  /* Note: Don't use Pins 0 & 1 (RX & TX lines) simultaneously.
+   * Will cause errors uploading the sketch if RX & TX are plugged in simultaneously. */
   for(int i=1; i<17; i++){
     pinMode(i, OUTPUT); // Initialize pins 1-16 as outputs for LEDs.
   }                     // Pins 14, 15, 16 are Analog Pins A0, A1, A2.
@@ -47,33 +57,18 @@ void setup() {
 
 void loop() {
 
-  const int TIME_TESTING_1_ON = 650;
-  const int TIME_TESTING_1_OFF = 150;
-  const int TIME_TESTING_2_ON = 450;
-  const int TIME_TESTING_2_OFF = 150;
-
-  //TurnAllLightsOn(); // FLASH ALL LIGHTS ON & OFF [Visual for testing]
-  //TurnAllLightsOff();
-  //delay(TIME_CONSTANT_FOR_TE
-  
-
-  int LEDmatrix[64][2] = {
-    {9, 16},{14, 16},{1, 16},{13, 16},{8, 16},{2, 16},{7, 16},{4, 16},
-    {9, 15},{14, 15},{1, 15},{13, 15},{8, 15},{2, 15},{7, 15},{4, 15},
-    {9, 11},{14, 11},{1, 11},{13, 11},{8, 11},{2, 11},{7, 11},{4, 11},
-    {9, 3}, {14, 3}, {1, 3}, {13, 3}, {8, 3}, {2, 3}, {7, 3}, {4, 3},
-    {9, 10},{14, 10},{1, 10},{13, 10},{8, 10},{2, 10},{7, 10},{4, 10},
-    {9, 5}, {14, 5}, {1, 5}, {13, 5}, {8, 5}, {2, 5}, {7, 5}, {4, 5},
-    {9, 6}, {14, 6}, {1, 6}, {13, 6}, {8, 6}, {2, 6}, {7, 6}, {4, 6},
-    {9, 12},{14, 12},{1, 12},{13, 12},{8, 12},{2, 12},{7, 12},{4, 12}
-  };
-
-for (int i=1; i<65; i++){
-  TurnOnLight(LEDmatrix[i][0], LEDmatrix[i][1]);
-  delay(50);
+  TurnAllLightsOn();
+  delay(1000);
   TurnAllLightsOff();
-  delay(50);
-}
+  delay(1000);
+
+  // scroll through LEDS left to right, row by row
+  for (int i=0; i<64; i++){
+    TurnOnLight(LEDmatrix[i][0], LEDmatrix[i][1]);
+    delay(50);
+    TurnAllLightsOff();
+    delay(50);
+  }
 
 }
 
