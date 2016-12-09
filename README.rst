@@ -1,5 +1,5 @@
 ********************************
-Group Project 2 - Arduino Joystick
+Group Project 2 - Arduino 8x8 LED Matrix
 ********************************
 
 by: Team Charlie!
