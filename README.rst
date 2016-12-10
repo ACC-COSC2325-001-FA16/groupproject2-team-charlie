@@ -12,3 +12,6 @@ Group Members:
     * Jackson Corgey
     * Destiny Nelson
     * Arthur Patterson
+
+
+   .. image:: Images/LEDmatrix (1).jpg
