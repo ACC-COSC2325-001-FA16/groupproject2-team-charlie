@@ -1,5 +1,5 @@
 ********************************
-Group Project 2 - Arduino 8x8 LED DisplayMatrix
+Group Project 2 - Arduino 8x8 LED Display
 ********************************
 in AVR Assembly!
 
