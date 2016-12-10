@@ -14,4 +14,4 @@ Group Members:
     * Arthur Patterson
 
 
-   .. image:: LEDmatrix (1).jpg
+   .. image:: /Images/LEDmatrix (1).jpg
