@@ -6,8 +6,9 @@
 
         .section .text
         .global     main
-        .extern     LEDcalls    
-        .extern     delay          
+        .extern     LEDcalls 
+        .extern     displayFunctions   
+        .extern     delay       
         .org        0x0000
 
 main:
@@ -21,15 +22,24 @@ main:
         call        init      
 
         ; enter the calls to light LEDs up here
-mainCalls:      
+mainCalls:
         call        toggleAllLights
-        call        delay
+        call        delayLong
+        call        delayLong
+        call        delayLong
+        call        delayLong
+        call        delayLong
+        call        delayLong
+        call        delayLong
+        call        delayLong
+        call        delayLong
         call        toggleAllLights
-        call        delay
-        call        toggleOneLight
-        call        delay
-        call        toggleOneLight
-        call        delay
+
+        call        minimalDelay_1through64
+        call        shortDelay_1through64
+        call        mediumDelay_1through64
+        call        longDelay_1through64
+
         rjmp        mainCalls
 
 
