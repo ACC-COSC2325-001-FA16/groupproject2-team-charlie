@@ -15,7 +15,7 @@ Group Members:
 
    .. image:: /Images/LEDmatrix1.jpg
    .. image:: /Images/LEDmatrix2.jpg
-   .. image:: /Images/LEDmatrix3.jpg
-   .. image:: /Images/LEDmatrix4.jpg
-   .. image:: /Images/LEDmatrix5.jpg
+   .. image:: /Images/LEDmatrix3.JPG
+   .. image:: /Images/LEDmatrix4.JPG
+   .. image:: /Images/LEDmatrix5.JPG
    .. image:: /Images/arduino_logo.jpg
