@@ -1,6 +1,7 @@
 ********************************
-Group Project 2 - Arduino 8x8 LED Matrix
+Group Project 2 - Arduino 8x8 LED DisplayMatrix
 ********************************
+in AVR Assembly!
 
 by: Team Charlie!
 #################
