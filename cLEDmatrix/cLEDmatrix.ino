@@ -1,6 +1,6 @@
 /* Arduino Uno 8X8 LED Matrix (Model: 1088BS) */
 // ----------------------------
-/* Orientaion:
+/* Orientation:
  - LED lights are on top, facing you.
  - Printed label [1088BS] is on right side of the matrix.
 
