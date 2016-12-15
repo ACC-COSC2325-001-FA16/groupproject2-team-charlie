@@ -17,629 +17,306 @@
 
 
 
-strobe1:
-	call        toggleLight1
-	call        delayShort
-	call        toggleLight5
-	call        delayShort
-	call        toggleLight6
-	call        delayShort
-	call        toggleLight4
-	call        delayShort
-	call        toggleLight7
-	call        delayShort
-	call        toggleLight3
-	call        delayShort
-	call        toggleLight8
-	call        delayShort
-	call        toggleLight4
-	call        delayShort
-	ret
-
-strobe2:
-	call        toggleLight1
-	call        toggleLight5
-	call        delayShort
-	call        toggleLight6
-	call        toggleLight4
-	call        delayShort
-	call        toggleLight7
-	call        toggleLight3
-	call        delayShort
-	call        toggleLight8
-	call        toggleLight4
-	call        delayShort
-	ret
-
 blast:
 	call    1f
-	call    delayShort
 	call    16f
-	call    delayShort
 	call    24f
-	call    delayShort
 	call    32f
-	call    delayShort
 	call    40f
-	call    delayShort
 	call    48f
-	call    delayShort
 	call    56f
-	call    delayShort
 	call    64f
-	call    delayShort
 	call    2f
-	call    delayShort
 	call    15f
-	call    delayShort
 	call    25f
-	call    delayShort
 	call    31f
-	call    delayShort
 	call    41f
-	call    delayShort
 	call    47f
-	call    delayShort
 	call    57f
-	call    delayShort
 	call    63f
-	call    delayShort
 	call    3f
-	call    delayShort
 	call    14f
-	call    delayShort
 	call    26f
-	call    delayShort
 	call    30f
-	call    delayShort
 	call    42f
-	call    delayShort
 	call    46f
-	call    delayShort
 	call    58f
-	call    delayShort
 	call    62f
-	call    delayShort
 	call    4f
-	call    delayShort
 	call    13f
-	call    delayShort
 	call    27f
-	call    delayShort
 	call    29f
-	call    delayShort
 	call    43f
-	call    delayShort
 	call    45f
-	call    delayShort
 	call    59f
-	call    delayShort
 	call    61f
-call    delayShort
+	ret
 
 couple:
 	call    1f
-	call    delayShort
 	call    64f
-	call    delayShort
 	call    2f
-	call    delayShort
 	call    63f
-	call    delayShort
 	call    3f
-	call    delayShort
 	call    62f
-	call    delayShort
 	call    4f
-	call    delayShort
 	call    61f
-	call    delayShort
 	call    5f
-	call    delayShort
 	call    60f
-	call    delayShort
 	call    6f
-	call    delayShort
 	call    59f
-	call    delayShort
 	call    7f
-	call    delayShort
 	call    58f
-	call    delayShort
 	call    8f
-	call    delayShort
 	call    57f
-	call    delayShort
 	call    9f
-	call    delayShort
 	call    56f
-	call    delayShort
 	call    10f
-	call    delayShort
 	call    55f
-	call    delayShort
 	call    11f
-	call    delayShort
 	call    54f
-	call    delayShort
 	call    12f
-	call    delayShort
 	call    53f
-	call    delayShort
 	call    13f
-	call    delayShort
 	call    52f
-	call    delayShort
 	call    14f
-	call    delayShort
 	call    51f
-	call    delayShort
 	call    15f
-	call    delayShort
 	call    50f
-	call    delayShort
 	call    16f
-	call    delayShort
 	call    49f
-	call    delayShort
 	call    17f
-	call    delayShort
 	call    48f
-	call    delayShort
 	call    18f
-	call    delayShort
 	call    47f
-	call    delayShort
 	call    19f
-	call    delayShort
 	call    46f
-	call    delayShort
 	call    20f
-	call    delayShort
 	call    45f
-	call    delayShort
 	call    21f
-	call    delayShort
 	call    44f
-	call    delayShort
 	call    22f
-	call    delayShort
 	call    43f
-	call    delayShort
 	call    23f
-	call    delayShort
 	call    42f
-	call    delayShort
 	call    24f
-	call    delayShort
 	call    41f
-	call    delayShort
 	call    25f
-	call    delayShort
 	call    40f
-	call    delayShort
 	call    26f
-	call    delayShort
 	call    39f
-	call    delayShort
 	call    27f
-	call    delayShort
 	call    38f
-	call    delayShort
 	call    28f
-	call    delayShort
 	call    37f
-	call    delayShort
 	call    29f
-	call    delayShort
 	call    36f
-	call    delayShort
 	call    30f
-	call    delayShort
 	call    35f
-	call    delayShort
 	call    31f
-	call    delayShort
 	call    34f
-	call    delayShort
 	call    32f
-	call    delayShort
 	call    33f
-	call    delayShort
 	ret
 
 snake:
 	call    1f
-	call    delayShort
 	call    2f
-	call    delayShort
 	call    3f
-	call    delayShort
 	call    4f
-	call    delayShort
 	call    5f
-	call    delayShort
 	call    6f
-	call    delayShort
 	call    7f
-	call    delayShort
 	call    8f
-	call    delayShort
 	call    16f
-	call    delayShort
 	call    26f
-	call    delayShort
 	call    27f
-	call    delayShort
 	call    28f
-	call    delayShort
 	call    29f
-	call    delayShort
 	call    30f
-	call    delayShort
 	call    31f
-	call    delayShort
 	call    32f
-	call    delayShort
 	call    40f
-	call    delayShort
 	call    50f
-	call    delayShort
 	call    51f
-	call    delayShort
 	call    52f
-	call    delayShort
 	call    53f
-	call    delayShort
 	call    54f
-	call    delayShort
 	call    55f
-	call    delayShort
 	call    56f
-	call    delayShort
 	call    64f
-	call    delayShort
 	call    1f
-	call    delayShort
 	call    2f
-	call    delayShort
 	call    3f
-	call    delayShort
 	call    4f
-	call    delayShort
 	call    5f
-	call    delayShort
 	call    6f
-	call    delayShort
 	call    7f
-	call    delayShort
 	call    8f
-	call    delayShort
 	call    15f
-	call    delayShort
 	call    14f
-	call    delayShort
 	call    13f
-	call    delayShort
 	call    12f
-	call    delayShort
 	call    11f
-	call    delayShort
 	call    10f
-	call    delayShort
 	call    9f
-	call    delayShort
 	call    18f
-	call    delayShort
 	call    19f
-	call    delayShort
 	call    20f
-	call    delayShort
 	call    21f
-	call    delayShort
 	call    22f
-	call    delayShort
 	call    23f
-	call    delayShort
 	call    24f
-	call    delayShort
 	call    31f
-	call    delayShort
 	call    30f
-	call    delayShort
 	call    29f
-	call    delayShort
 	call    28f
-	call    delayShort
 	call    27f
-	call    delayShort
 	call    26f
-	call    delayShort
 	call    25f
-	call    delayShort
 	call    34f
-	call    delayShort
 	call    35f
-	call    delayShort
 	call    36f
-	call    delayShort
 	call    37f
-	call    delayShort
 	call    38f
-	call    delayShort
 	call    39f
-	call    delayShort
 	call    40f
-	call    delayShort
 	call    47f
-	call    delayShort
 	call    46f
-	call    delayShort
 	call    45f
-	call    delayShort
 	call    44f
-	call    delayShort
 	call    43f
-	call    delayShort
 	call    42f
-	call    delayShort
 	call    41f
-	call    delayShort
 	call    50f
-	call    delayShort
 	call    51f
-	call    delayShort
 	call    52f
-	call    delayShort
 	call    53f
-	call    delayShort
 	call    54f
-	call    delayShort
 	call    55f
-	call    delayShort
 	call    56f
-	call    delayShort
 	call    63f
-	call    delayShort
 	call    62f
-	call    delayShort
 	call    61f
-	call    delayShort
 	call    60f
-	call    delayShort
 	call    59f
-	call    delayShort
 	call    58f
-	call    delayShort
 	call    57f
-	call    delayShort
 	ret
 
 miniSwirl:
 	call    1f
-	call    delayShort
 	call    2f
-	call    delayShort
 	call    10f
-	call    delayShort
 	call    9f
-	call    delayShort
 	call    3f
-	call    delayShort
 	call    4f
-	call    delayShort
 	call    12f
-	call    delayShort
 	call    11f
-	call    delayShort
 	call    5f
-	call    delayShort
 	call    6f
-	call    delayShort
 	call    14f
-	call    delayShort
 	call    13f
-	call    delayShort
 	call    7f
-	call    delayShort
 	call    8f
-	call    delayShort
 	call    16f
-	call    delayShort
 	call    15f
-	call    delayShort
 	call    9f
-	call    delayShort
 	call    10f
-	call    delayShort
 	call    18f
-	call    delayShort
 	call    17f
-	call    delayShort
 	call    11f
-	call    delayShort
 	call    12f
-	call    delayShort
 	call    20f
-	call    delayShort
 	call    19f
-	call    delayShort
 	call    13f
-	call    delayShort
 	call    14f
-	call    delayShort
 	call    22f
-	call    delayShort
 	call    21f
-	call    delayShort
 	call    15f
-	call    delayShort
 	call    16f
-	call    delayShort
 	call    24f
-	call    delayShort
 	call    23f
-	call    delayShort
 	call    17f
-	call    delayShort
 	call    18f
-	call    delayShort
 	call    26f
-	call    delayShort
 	call    25f
-	call    delayShort
 	call    19f
-	call    delayShort
 	call    20f
-	call    delayShort
 	call    28f
-	call    delayShort
 	call    27f
-	call    delayShort
 	call    21f
-	call    delayShort
 	call    22f
-	call    delayShort
 	call    30f
-	call    delayShort
 	call    29f
-	call    delayShort
 	call    23f
-	call    delayShort
 	call    24f
-	call    delayShort
 	call    32f
-	call    delayShort
 	call    31f
-	call    delayShort
 	call    25f
-	call    delayShort
 	call    26f
-	call    delayShort
 	call    34f
-	call    delayShort
 	call    33f
-	call    delayShort
 	call    27f
-	call    delayShort
 	call    28f
-	call    delayShort
 	call    36f
-	call    delayShort
 	call    35f
-	call    delayShort
 	call    29f
-	call    delayShort
 	call    30f
-	call    delayShort
 	call    38f
-	call    delayShort
 	call    37f
-	call    delayShort
 	call    31f
-	call    delayShort
 	call    32f
-	call    delayShort
 	call    40f
-	call    delayShort
 	call    39f
-	call    delayShort
 	call    33f
-	call    delayShort
 	call    34f
-	call    delayShort
 	call    42f
-	call    delayShort
 	call    41f
-	call    delayShort
 	call    35f
-	call    delayShort
 	call    36f
-	call    delayShort
 	call    44f
-	call    delayShort
 	call    43f
-	call    delayShort
 	call    37f
-	call    delayShort
 	call    38f
-	call    delayShort
 	call    46f
-	call    delayShort
 	call    45f
-	call    delayShort
 	call    39f
-	call    delayShort
 	call    40f
-	call    delayShort
 	call    48f
-	call    delayShort
 	call    47f
-	call    delayShort
 	call    41f
-	call    delayShort
 	call    42f
-	call    delayShort
 	call    50f
-	call    delayShort
 	call    49f
-	call    delayShort
 	call    43f
-	call    delayShort
 	call    44f
-	call    delayShort
 	call    52f
-	call    delayShort
 	call    51f
-	call    delayShort
 	call    45f
-	call    delayShort
 	call    46f
-	call    delayShort
 	call    54f
-	call    delayShort
 	call    53f
-	call    delayShort
 	call    47f
-	call    delayShort
 	call    48f
-	call    delayShort
 	call    56f
-	call    delayShort
 	call    55f
-	call    delayShort
 	call    49f
-	call    delayShort
 	call    50f
-	call    delayShort
 	call    58f
-	call    delayShort
 	call    57f
-	call    delayShort
 	call    51f
-	call    delayShort
 	call    52f
-	call    delayShort
 	call    60f
-	call    delayShort
 	call    59f
-	call    delayShort
 	call    53f
-	call    delayShort
 	call    54f
-	call    delayShort
 	call    62f
-	call    delayShort
 	call    61f
-	call    delayShort
 	call    55f
-	call    delayShort
 	call    56f
-	call    delayShort
 	call    64f
-	call    delayShort
 	call    63f
-	call    delayShort
 	ret
 
     
